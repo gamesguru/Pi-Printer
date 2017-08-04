@@ -1,0 +1,29 @@
+<html>
+<script>
+function printSentence(id){
+        var n=0;
+        var pi=0;
+        var term=0;
+        var intObject= setInterval(function() {
+               for (i=0; i<n; i++)
+               {
+                   term= 1/64 * (Math.pow(-1,i) / Math.pow(2, 10*i)) * (1/(10*i+9) + 256/(10*i+1) - 32/(4*i+1) - 1/(4*i+3) - 64/(10*i+3) - 4/(10*i+5)- 4/(10*i+7));
+                   
+                   
+               }
+               pi+=term;
+               document.getElementById(id).innerHTML=pi;
+               
+               
+               n++;
+               
+            }, 1000);
+}
+</script>
+<body>
+
+ <div id="diii"  onclick="printSentence('diii');" style="height:500;width:500">
+
+ </div>
+</body>
+</html>
